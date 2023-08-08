@@ -91,4 +91,38 @@ const SampleComponent = () => {
 export default SampleComponent;
 ```
 
+**Updating Resources in Websites**
+
+```js
+<!DOCTYPE html>
+<html lang="en">
+<body>
+  
+  <web-component></web-component>
+
+  <script type="module">
+
+    import ResourceVersionLoader from "https://cdn.jsdelivr.net/gh/bhokloo/resource-version-loader@v1.0.3/index.js"
+    const localVersion = {
+      etimetable : '0.0.1'
+    }
+
+    const resourceLoaderOptions = {
+    versionEndpoint: "https://sample-website.com/versioning.json", // Endpoint to fetch the latest version
+    cssResourceUrl: `https://sample-website.com/web-component/js/index_v${localVersion.web_component_one}.css`, // CSS URL with curr version
+    jsResourceUrl: `https://sample-website.com/web-component/css/style_v${localVersion.web_component_one}.js`, // JS with curr version
+    localVersion: localVersion.web_component_one,
+    updateLocalVersion: (version) => {
+      // Your code to update local version
+      },
+    };
+
+    ResourceVersionLoader(resourceLoaderOptions);
+  </script>
+</body>
+</html>
+```
+
+Github Repo: https://github.com/bhokloo/resource-version-loader
+
 _Thank you._ 😊
