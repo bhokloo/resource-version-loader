@@ -97,14 +97,14 @@ export default SampleComponent;
 <!DOCTYPE html>
 <html lang="en">
 <body>
-  
+
   <web-component></web-component>
 
   <script type="module">
 
     import ResourceVersionLoader from "https://cdn.jsdelivr.net/gh/bhokloo/resource-version-loader@v1.0.3/index.js"
     const localVersion = {
-      etimetable : '0.0.1'
+      web_component_one : '0.0.1'
     }
 
     const resourceLoaderOptions = {
