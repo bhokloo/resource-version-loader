@@ -125,6 +125,4 @@ export default SampleComponent;
 </html>
 ```
 
-Github Repo: https://github.com/bhokloo/resource-version-loader
-
 _Thank you._ 😊
