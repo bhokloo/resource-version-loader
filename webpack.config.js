@@ -3,10 +3,10 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
 
 module.exports = {
-  entry: './index.ts', // Update the entry file to index.ts
+  entry: './index.js',
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: 'resource-version-loader.js', // Generate both minified and non-minified versions
+    filename: 'resource-version-loader.js',
     library: 'ResourceVersionLoader',
     libraryTarget: 'umd',
     umdNamedDefine: true,
@@ -29,16 +29,4 @@ module.exports = {
   plugins: [
     new CleanWebpackPlugin(),
   ],
-  module: {
-    rules: [
-      {
-        test: /\.tsx?$/, // Match TypeScript files
-        exclude: /node_modules/,
-        use: 'ts-loader', // Use ts-loader to handle TypeScript files
-      },
-    ],
-  },
-  resolve: {
-    extensions: ['.ts', '.js'], // Add '.ts' to the list of file extensions
-  },
 };
