@@ -1,0 +1,25 @@
+{
+  "name": "resource-version-loader",
+  "version": "0.0.10",
+  "description": "The Resource Version Loader is an NPM package that allows you to easily manage and update CSS and JavaScript resources on your website based on version changes.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "resource-loader",
+    "resource-version-loader",
+    "dynamic-resource-loader",
+    "resource-loader"
+  ],
+  "author": "Indrajit Maurya (bhokloo)",
+  "license": "ISC",
+  "devDependencies": {
+    "clean-webpack-plugin": "^4.0.0",
+    "terser-webpack-plugin": "^5.3.9",
+    "ts-loader": "^9.4.4",
+    "typescript": "^5.1.6",
+    "webpack": "^5.88.2",
+    "webpack-cli": "^5.1.4"
+  }
+}
