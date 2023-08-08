@@ -1,3 +1,5 @@
+NPM Link: https://www.npmjs.com/package/resource-version-loader
+
 **Dynamic Resource Loader** 🔄
 
 The **Dynamic Resource Loader** is an NPM package that simplifies the management and updating of CSS and JavaScript resources on your website, all driven by version changes. This powerful package offers a versatile solution for loading resources with cache busting, ensuring that your website always delivers the most up-to-date versions from the server.
