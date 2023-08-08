@@ -21,13 +21,13 @@ npm install resource-version-loader
 
 1. **Import the package**:
 
-   ```typescript
+   ```js
    import dynamicResourceLoader from "resource-version-loader";
    ```
 
 2. **Configure the package options**:
 
-   ```typescript
+   ```js
    const resourceLoaderOptions = {
      versionEndpoint: "https://example.com/versioning.json", // Endpoint to fetch the latest version
      cssResourceUrl: "YOUR_CSS_URL_HERE", // CSS URL with the current version
@@ -44,7 +44,7 @@ npm install resource-version-loader
    - Use the actual API endpoint in place of `versionEndpoint`.
    - The `versionEndpoint` URL should furnish a JSON response containing the most recent version:
 
-   ```typescript
+   ```js
    {
    "version": "1.0.0"
    }
@@ -55,12 +55,40 @@ npm install resource-version-loader
    const version = data.version;
    ```
 
-   - Replace `YOUR_CSS_URL_HERE`, `YOUR_JS_URL_HERE`, and `YOUR_LOCAL_VERSION` with their respective values.
    - The `localVersion` ensures the integrity of the local cache, preventing unnecessary cache clearing unless a new version is obtainable.
    - Utilize the `updateLocalVersion` function to keep your local version up to date, ensuring synchronization between your resources and the endpoint.
 
 3. **Invoke the dynamicResourceLoader function** with the specified options:
 
-   ```typescript
+   ```js
    dynamicResourceLoader(resourceLoaderOptions);
    ```
+
+**Updating Resources in React**
+
+```js
+import ResourceVersionLoader from "resource-version-loader";
+
+const SampleComponent = () => {
+  const localVersion = {
+    web_component_one: "0.0.1", //sample
+  };
+
+  const resourceLoaderOptions = {
+    versionEndpoint: "https://sample-website.com/versioning.json", // Endpoint to fetch the latest version
+    cssResourceUrl: `https://sample-website.com/web-component/js/index_v${localVersion.web_component_one}.css`, // CSS URL with curr version
+    jsResourceUrl: `https://sample-website.com/web-component/css/style_v${localVersion.web_component_one}.js`, // JS with curr version
+    localVersion: localVersion.web_component_one,
+    updateLocalVersion: (version: string) => {
+      // Your code to update local version
+    },
+  };
+
+  useEffect(() => ResourceVersionLoader(resourceLoaderOptions), []);
+
+  return <web-component></web-component>;
+};
+export default SampleComponent;
+```
+
+_Thank you._ 😊

@@ -1,0 +1,9 @@
+# Ignore webpack config
+webpack.config.js
+
+# Ignore package lock
+package-lock.json
+
+# Ignore Git ignore
+.gitignore
+

@@ -3,10 +3,10 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
 
 module.exports = {
-  entry: './index.js',
+  entry: './main.js',
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: 'resource-version-loader.js',
+    filename: 'index.js',
     library: 'ResourceVersionLoader',
     libraryTarget: 'umd',
     umdNamedDefine: true,

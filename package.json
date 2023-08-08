@@ -1,6 +1,6 @@
 {
   "name": "resource-version-loader",
-  "version": "0.0.10",
+  "version": "0.0.25",
   "description": "The Resource Version Loader is an NPM package that allows you to easily manage and update CSS and JavaScript resources on your website based on version changes.",
   "main": "index.js",
   "scripts": {
