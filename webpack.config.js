@@ -6,7 +6,7 @@ module.exports = {
   entry: './index.ts', // Update the entry file to index.ts
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: 'resource-version-loader.min.js',
+    filename: 'resource-version-loader.js', // Generate both minified and non-minified versions
     library: 'ResourceVersionLoader',
     libraryTarget: 'umd',
     umdNamedDefine: true,
