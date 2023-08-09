@@ -78,7 +78,7 @@ export const LocalVersion = {
 
 ```ts
 import ResourceVersionLoader from "resource-version-loader";
-import LocalVersion from "./path-to-local-version";
+import { LocalVersion } from "./path-to-local-version";
 
 const SampleComponent = () => {
   const LocalVersion = {
@@ -109,7 +109,7 @@ export default SampleComponent;
 <html lang="en">
   <script type="module">
     import ResourceVersionLoader from "https://cdn.jsdelivr.net/gh/bhokloo/resource-version-loader@v1.0.0/index.js";
-    import LocalVersion from "./path-to-local-version";
+    import { LocalVersion } from "./path-to-local-version";
 
     const resourceLoaderOptions = {
       versionEndpoint: "https://sample-website.com/versioning.json", // Endpoint to fetch the latest version
