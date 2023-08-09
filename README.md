@@ -67,7 +67,7 @@ npm install resource-version-loader
    ```
 <h1>Sample 👍</h1>
 
-<h3>Updating Resources in React ⚛️</h3>
+<h3>Parent-Level Maintenance of Local Version 💾</h3>
 
 ```js
 //local-verison.js
@@ -75,6 +75,8 @@ export const LocalVersion = {
   web_component_one: "0.0.1",
 };
 ```
+
+<h3>Updating Resources in React ⚛️</h3>
 
 ```ts
 import ResourceVersionLoader from "resource-version-loader";
