@@ -1,8 +1,8 @@
-NPM Link: https://www.npmjs.com/package/resource-version-loader
+**NPM Link:** https://www.npmjs.com/package/resource-version-loader 🔗
 
-**Dynamic Resource Loader** 🔄
+**Resource Version Loader** 🔄
 
-The **Dynamic Resource Loader** is an NPM package that simplifies the management and updating of CSS and JavaScript resources on your website, all driven by version changes. This powerful package offers a versatile solution for loading resources with cache busting, ensuring that your website always delivers the most up-to-date versions from the server.
+The **Resource Version Loader** is an NPM package that simplifies the management and updating of CSS and JavaScript resources on your website, all driven by version changes. This powerful package offers a versatile solution for loading resources with cache busting, ensuring that your website always delivers the most up-to-date versions from the server.
 
 **Features** 🌟
 
@@ -13,7 +13,7 @@ The **Dynamic Resource Loader** is an NPM package that simplifies the management
 
 **Installation** 💻
 
-To get started with the Dynamic Resource Loader package, simply use the following command:
+To get started with the Resource Version Loader package, simply use the following command:
 
 ```
 npm install resource-version-loader
