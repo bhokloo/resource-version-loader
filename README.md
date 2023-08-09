@@ -71,7 +71,7 @@ npm install resource-version-loader
 
 ```js
 //local-verison.js
-const LocalVersion = {
+export const LocalVersion = {
   web_component_one: "0.0.1",
 };
 ```
