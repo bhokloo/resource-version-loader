@@ -1,12 +1,6 @@
-<<<<<<< HEAD
 **Resource Version Loader** 🔄
 
-**Github Repo**: https://github.com/bhokloo/resource-version-loader 🔗
-=======
 **NPM Link:** https://www.npmjs.com/package/resource-version-loader 🔗
-
-**Resource Version Loader** 🔄
->>>>>>> 9881e1cea72bc0c981b80f3a26891dc9471b4095
 
 The **Resource Version Loader** is an NPM package that simplifies the management and updating of CSS and JavaScript resources on your website, all driven by version changes. This powerful package offers a versatile solution for loading resources with cache busting, ensuring that your website always delivers the most up-to-date versions from the server.
 
@@ -94,7 +88,7 @@ const SampleComponent = () => {
 
   useEffect(() => ResourceVersionLoader(resourceLoaderOptions), []);
 
-  return <web-component></web-component>;
+  return <web-component />;
 };
 export default SampleComponent;
 ```
