@@ -44,7 +44,7 @@ npm install resource-version-loader
    **Note** 🌟
 
    - Use the actual API endpoint in place of `versionEndpoint`.
-   - The `versionEndpoint` URL should furnish a JSON response containing the most recent version:
+   - The `versionEndpoint` URL should furnish a JSON response containing the most recent version.
 
    ```js
    {
