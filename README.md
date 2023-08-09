@@ -69,20 +69,28 @@ npm install resource-version-loader
 **Updating Resources in React**
 
 ```js
+//local-verison.js
+const LocalVersion = {
+  web_component_one: "0.0.1",
+};
+```
+
+```ts
 import ResourceVersionLoader from "resource-version-loader";
+import LocalVersion from "./path-to-local-version";
 
 const SampleComponent = () => {
-  const localVersion = {
+  const LocalVersion = {
     web_component_one: "0.0.1", //sample
   };
 
   const resourceLoaderOptions = {
     versionEndpoint: "https://sample-website.com/versioning.json", // Endpoint to fetch the latest version
-    cssResourceUrl: `https://sample-website.com/web-component/js/index_v${localVersion.web_component_one}.css`, // CSS URL with curr version
-    jsResourceUrl: `https://sample-website.com/web-component/css/style_v${localVersion.web_component_one}.js`, // JS with curr version
-    localVersion: localVersion.web_component_one,
+    cssResourceUrl: `https://sample-website.com/web-component/js/index_v${LocalVersion.web_component_one}.css`, // CSS URL with curr version
+    jsResourceUrl: `https://sample-website.com/web-component/css/style_v${LocalVersion.web_component_one}.js`, // JS with curr version
+    localVersion: LocalVersion.web_component_one,
     updateLocalVersion: (version: string) => {
-      // Your code to update local version
+      // callback function to update your LocalVersion.
     },
   };
 
@@ -95,28 +103,27 @@ export default SampleComponent;
 
 **Updating Resources in Websites**
 
-```js
+```html
 <!DOCTYPE html>
 <html lang="en">
-<script type="module">
-  import ResourceVersionLoader from "https://cdn.jsdelivr.net/gh/bhokloo/resource-version-loader@v1.0.0/index.js"
-  const localVersion = {
-    web_component_one : '0.0.1'
-  }
-  const resourceLoaderOptions = {
-  versionEndpoint: "https://sample-website.com/versioning.json", // Endpoint to fetch the latest version
-  cssResourceUrl: `https://sample-website.com/web-component/js/index_v${localVersion.web_component_one}.css`, // CSS URL with curr version
-  jsResourceUrl: `https://sample-website.com/web-component/css/style_v${localVersion.web_component_one}.js`, // JS with curr version
-  localVersion: localVersion.web_component_one,
-  updateLocalVersion: (version) => {
-    // Your code to update local version and save it locally.
-    },
-  };
-  ResourceVersionLoader(resourceLoaderOptions);
-</script>
-<body>
-  <web-component/>
-</body>
+  <script type="module">
+    import ResourceVersionLoader from "https://cdn.jsdelivr.net/gh/bhokloo/resource-version-loader@v1.0.0/index.js";
+    import LocalVersion from "./path-to-local-version";
+
+    const resourceLoaderOptions = {
+      versionEndpoint: "https://sample-website.com/versioning.json", // Endpoint to fetch the latest version
+      cssResourceUrl: `https://sample-website.com/web-component/js/index_v${LocalVersion.web_component_one}.css`, // CSS URL with curr version
+      jsResourceUrl: `https://sample-website.com/web-component/css/style_v${LocalVersion.web_component_one}.js`, // JS with curr version
+      localVersion: LocalVersion.web_component_one,
+      updateLocalVersion: (version) => {
+        // callback function to update your LocalVersion.
+      },
+    };
+    ResourceVersionLoader(resourceLoaderOptions);
+  </script>
+  <body>
+    <web-component />
+  </body>
 </html>
 ```
 
