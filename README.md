@@ -81,10 +81,6 @@ import ResourceVersionLoader from "resource-version-loader";
 import { LocalVersion } from "./path-to-local-version";
 
 const SampleComponent = () => {
-  const LocalVersion = {
-    web_component_one: "0.0.1", //sample
-  };
-
   const resourceLoaderOptions = {
     versionEndpoint: "https://sample-website.com/versioning.json", // Endpoint to fetch the latest version
     cssResourceUrl: `https://sample-website.com/web-component/js/index_v${LocalVersion.web_component_one}.css`, // CSS URL with curr version
@@ -96,7 +92,6 @@ const SampleComponent = () => {
   };
 
   useEffect(() => ResourceVersionLoader(resourceLoaderOptions), []);
-
   return <web-component />;
 };
 export default SampleComponent;
