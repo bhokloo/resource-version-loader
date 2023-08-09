@@ -65,7 +65,7 @@ npm install resource-version-loader
    ```js
    ResourceVersionLoader(resourceLoaderOptions);
    ```
-<h1>Sample 😄</h1>
+<h1>Sample 👍</h1>
 
 <h3>Updating Resources in React ⚛️</h3>
 
