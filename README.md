@@ -1,17 +1,17 @@
-**Resource Version Loader** 🔄
+<h1>Resource Version Loader 🔄</h1>
 
-**NPM Link:** https://www.npmjs.com/package/resource-version-loader 🔗
+<h3>NPM Link: https://www.npmjs.com/package/resource-version-loader 🔗</h3>
 
 The **Resource Version Loader** is an NPM package that simplifies the management and updating of CSS and JavaScript resources on your website, all driven by version changes. This powerful package offers a versatile solution for loading resources with cache busting, ensuring that your website always delivers the most up-to-date versions from the server.
 
-**Features** 🌟
+<h3>Features 🌟</h3>
 
 - Seamless integration into your projects.
 - Customizable configuration for version endpoint, CSS URL, and JavaScript URL.
 - Efficient cache busting mechanism guarantees the use of updated resources.
 - Automatic resource updates triggered by version changes.
 
-**Installation** 💻
+<h3>Installation 💻</h3>
 
 To get started with the Resource Version Loader package, simply use the following command:
 
@@ -19,7 +19,7 @@ To get started with the Resource Version Loader package, simply use the followin
 npm install resource-version-loader
 ```
 
-**Usage** 🚀
+<h3>Usage 🚀</h3>
 
 1. **Import the package**:
 
@@ -65,8 +65,9 @@ npm install resource-version-loader
    ```js
    ResourceVersionLoader(resourceLoaderOptions);
    ```
+<h1>Sample 😄</h1>
 
-**Updating Resources in React**
+<h3>Updating Resources in React ⚛️</h3>
 
 ```js
 //local-verison.js
@@ -101,7 +102,7 @@ const SampleComponent = () => {
 export default SampleComponent;
 ```
 
-**Updating Resources in Websites**
+<h3>Updating Resources in Websites 🌐</h3>
 
 ```html
 <!DOCTYPE html>
