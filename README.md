@@ -24,7 +24,7 @@ npm install resource-version-loader
 1. **Import the package**:
 
    ```js
-   import dynamicResourceLoader from "resource-version-loader";
+   import ResourceVersionLoader from "resource-version-loader";
    ```
 
 2. **Configure the package options**:
@@ -60,10 +60,10 @@ npm install resource-version-loader
    - The `localVersion` ensures the integrity of the local cache, preventing unnecessary cache clearing unless a new version is obtainable.
    - Utilize the `updateLocalVersion` function to keep your local version up to date, ensuring synchronization between your resources and the endpoint.
 
-3. **Invoke the dynamicResourceLoader function** with the specified options:
+3. **Invoke the ResourceVersionLoader function** with the specified options:
 
    ```js
-   dynamicResourceLoader(resourceLoaderOptions);
+   ResourceVersionLoader(resourceLoaderOptions);
    ```
 
 **Updating Resources in React**
