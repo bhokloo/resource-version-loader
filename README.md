@@ -1,6 +1,8 @@
-**Dynamic Resource Loader** 🔄
+**Resource Version Loader** 🔄
 
-The **Dynamic Resource Loader** is an NPM package that simplifies the management and updating of CSS and JavaScript resources on your website, all driven by version changes. This powerful package offers a versatile solution for loading resources with cache busting, ensuring that your website always delivers the most up-to-date versions from the server.
+**Github Repo**: https://github.com/bhokloo/resource-version-loader 🔗
+
+The **Resource Version Loader** is an NPM package that simplifies the management and updating of CSS and JavaScript resources on your website, all driven by version changes. This powerful package offers a versatile solution for loading resources with cache busting, ensuring that your website always delivers the most up-to-date versions from the server.
 
 **Features** 🌟
 
@@ -11,7 +13,7 @@ The **Dynamic Resource Loader** is an NPM package that simplifies the management
 
 **Installation** 💻
 
-To get started with the Dynamic Resource Loader package, simply use the following command:
+To get started with the Resource Version Loader package, simply use the following command:
 
 ```
 npm install resource-version-loader
@@ -96,33 +98,26 @@ export default SampleComponent;
 ```js
 <!DOCTYPE html>
 <html lang="en">
+<script type="module">
+  import ResourceVersionLoader from "https://cdn.jsdelivr.net/gh/bhokloo/resource-version-loader@v1.0.0/index.js"
+  const localVersion = {
+    web_component_one : '0.0.1'
+  }
+  const resourceLoaderOptions = {
+  versionEndpoint: "https://sample-website.com/versioning.json", // Endpoint to fetch the latest version
+  cssResourceUrl: `https://sample-website.com/web-component/js/index_v${localVersion.web_component_one}.css`, // CSS URL with curr version
+  jsResourceUrl: `https://sample-website.com/web-component/css/style_v${localVersion.web_component_one}.js`, // JS with curr version
+  localVersion: localVersion.web_component_one,
+  updateLocalVersion: (version) => {
+    // Your code to update local version and save it locally.
+    },
+  };
+  ResourceVersionLoader(resourceLoaderOptions);
+</script>
 <body>
-
-  <web-component></web-component>
-
-  <script type="module">
-
-    import ResourceVersionLoader from "https://cdn.jsdelivr.net/gh/bhokloo/resource-version-loader@v1.0.3/index.js"
-    const localVersion = {
-      web_component_one : '0.0.1'
-    }
-
-    const resourceLoaderOptions = {
-    versionEndpoint: "https://sample-website.com/versioning.json", // Endpoint to fetch the latest version
-    cssResourceUrl: `https://sample-website.com/web-component/js/index_v${localVersion.web_component_one}.css`, // CSS URL with curr version
-    jsResourceUrl: `https://sample-website.com/web-component/css/style_v${localVersion.web_component_one}.js`, // JS with curr version
-    localVersion: localVersion.web_component_one,
-    updateLocalVersion: (version) => {
-      // Your code to update local version
-      },
-    };
-
-    ResourceVersionLoader(resourceLoaderOptions);
-  </script>
+  <web-component/>
 </body>
 </html>
 ```
-
-Github Repo: https://github.com/bhokloo/resource-version-loader
 
 _Thank you._ 😊
