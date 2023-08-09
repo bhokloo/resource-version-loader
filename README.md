@@ -93,7 +93,10 @@ const SampleComponent = () => {
     },
   };
 
-  useEffect(() => ResourceVersionLoader(resourceLoaderOptions), []);
+  useEffect(() => {
+    ResourceVersionLoader(resourceLoaderOptions);
+  }, []);
+
   return <web-component />;
 };
 export default SampleComponent;
